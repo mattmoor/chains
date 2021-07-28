@@ -9,8 +9,8 @@ require (
 	github.com/golangci/golangci-lint v1.41.1
 	github.com/google/addlicense v0.0.0-20210809195240-d43bb61fdfda
 	github.com/google/go-cmp v0.5.6
-	github.com/google/go-containerregistry v0.5.1
-	github.com/google/go-containerregistry/pkg/authn/k8schain v0.0.0-20210216200643-d81088d9983e
+	github.com/google/go-containerregistry v0.5.2-0.20210609162550-f0ce2270b3b4
+	github.com/google/go-containerregistry/pkg/authn/k8schain v0.0.0-20210610160139-c086c7f16d4e
 	github.com/google/go-licenses v0.0.0-20210329231322-ce1d9163b77d
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/in-toto/in-toto-golang v0.2.1-0.20210627200632-886210ae2ab9
@@ -28,11 +28,8 @@ require (
 	k8s.io/api v0.22.0
 	k8s.io/apimachinery v0.21.3
 	k8s.io/client-go v0.22.0
-	k8s.io/code-generator v0.20.7
-	k8s.io/klog/v2 v2.8.0 // indirect
-	k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7 // indirect
-	knative.dev/pkg v0.0.0-20210510175900-4564797bf3b7
-	sigs.k8s.io/structured-merge-diff/v4 v4.1.0 // indirect
+	k8s.io/code-generator v0.21.2
+	knative.dev/pkg v0.0.0-20210730172132-bb4aaf09c430
 )
 
 // Knative deps (release-0.20)
@@ -43,4 +40,9 @@ replace (
 	k8s.io/api => k8s.io/api v0.20.7
 	k8s.io/apimachinery => k8s.io/apimachinery v0.20.7
 	k8s.io/client-go => k8s.io/client-go v0.20.7
+)
+
+replace (
+	github.com/tektoncd/pipeline => github.com/mattmoor/pipeline v0.9.1-0.20210817040355-bb57443cacb8
+	knative.dev/pkg => github.com/mattmoor/pkg v0.0.0-20210817013400-b24f589bee39
 )
